@@ -31,6 +31,7 @@ class Warrior {
       return "Invalid level";
     } else if (enemyLevel > this.level()) {
       this.xp += 20 * (enemyLevel - this.level()) ** 2;
+      return "An intense fight";
     } else if (enemyLevel == this.level()) {
       this.xp += 10;
       return "A good fight";
