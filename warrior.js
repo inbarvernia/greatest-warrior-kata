@@ -36,6 +36,7 @@ class Warrior {
     }
 
     this.xp += experienceAwarded;
+    return description;
   }
 
 }

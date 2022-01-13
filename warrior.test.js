@@ -27,7 +27,7 @@ describe('Warrior', () => {
     expect(warrior.experience()).toBe(110);
   })
 
-  test('can gain experience by training, based on experience specified in description', () => {
+  test('can gain experience by training, based on experience specified', () => {
     warrior.training(["Defeated Chuck Norris", 9000, 1]);
     expect(warrior.experience()).toBe(9100);
   })
@@ -42,6 +42,10 @@ describe('Warrior', () => {
 
   test('can train and enter training details', () => {
     expect(warrior.training(["Defeated Chuck Norris", 9000, 1])).toBeDefined;
+  })
+
+  test('receives training description back if current level meets minimum required', () => {
+    expect(warrior.training(["Defeated Chuck Norris", 9000, 1])).toBe("Defeated Chuck Norris");
   })
 
   test('receives "Not strong enough" message if current level does not meet the minimum training level requirement', () => {
