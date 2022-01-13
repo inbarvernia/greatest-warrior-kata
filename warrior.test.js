@@ -10,7 +10,11 @@ describe('Warrior', () => {
     warrior = new Warrior();
   })
 
-  test('has a level which starts at 1', () => {
+  test('starts at level 1', () => {
     expect(warrior.level()).toBe(1);
+  })
+
+  test('starts at rank "Pushover"', () => {
+    expect(warrior.rank()).toBe("Pushover");
   })
 })
