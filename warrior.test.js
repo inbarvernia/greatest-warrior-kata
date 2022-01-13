@@ -32,6 +32,11 @@ describe('Warrior', () => {
     expect(warrior.experience()).toBe(9100);
   })
 
+  test('cannot gain experience by training if below required level', () => {
+    warrior.training(["Defeated Chuck Norris", 9000, 2]);
+    expect(warrior.experience()).toBe(100);
+  })
+
   test('starts with an empty array of achievements', () => {
     expect(warrior.achievements()).toBeDefined;
   })
@@ -39,6 +44,11 @@ describe('Warrior', () => {
   test('gets training description added to achievements if meeting level requirement', () => {
     warrior.training(["Defeated Chuck Norris", 9000, 1]);
     expect(warrior.achievements()).toContain("Defeated Chuck Norris");
+  })
+
+  test('does not get training description added to achievements if below level requirement', () => {
+    warrior.training(["Defeated Chuck Norris", 9000, 2]);
+    expect(warrior.achievements()).not.toContain("Defeated Chuck Norris");
   })
 
   test("can engage in battle and record enemy's level", () => {

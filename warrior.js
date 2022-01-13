@@ -38,11 +38,11 @@ class Warrior {
 
     if (minLevel > this.level()) {
       return "Not strong enough";
+    } else {
+      this.xp += experienceAwarded;
+      this.achievementArr.push(description);
+      return description;
     }
-
-    this.xp += experienceAwarded;
-    this.achievementArr.push(description);
-    return description;
   }
 
 }
