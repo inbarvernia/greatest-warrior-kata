@@ -22,11 +22,16 @@ describe('Warrior', () => {
     expect(warrior.experience()).toBe(100);
   })
 
+  test('experience increases by 10 when battling enemy of same level', () => {
+    warrior.battle(1);
+    expect(warrior.experience()).toBe(110);
+  })
+
   test("can engage in battle and record enemy's level", () => {
     expect(warrior.battle(1)).toBeDefined;
   })
 
-  test("Cannot engage in battle if an enemy level doesn't fall in the range of 1-100", () => {
+  test("cannot engage in battle if an enemy level doesn't fall in the range of 1-100", () => {
     expect(warrior.battle(111)).toBe("Invalid level");
   })
 })
