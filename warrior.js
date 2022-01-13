@@ -27,9 +27,15 @@ class Warrior {
   }
 
   training(detailArray) {
-    if (detailArray[2] > this.level()) {
+    const description = detailArray[0];
+    const experienceAwarded = detailArray[1];
+    const minLevel = detailArray[2];
+
+    if (minLevel > this.level()) {
       return "Not strong enough";
     }
+
+    this.xp += experienceAwarded;
   }
 
 }
