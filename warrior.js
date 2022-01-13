@@ -14,6 +14,10 @@ class Warrior {
     return 100;
   }
 
+  battle(enemyLevel) {
+    
+  }
+
 }
 
 module.exports = Warrior;
