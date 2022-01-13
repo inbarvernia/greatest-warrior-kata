@@ -36,6 +36,11 @@ describe('Warrior', () => {
     expect(warrior.achievements()).toBeDefined;
   })
 
+  test('gets training description added to achievements if meeting level requirement', () => {
+    warrior.training(["Defeated Chuck Norris", 9000, 1]);
+    expect(warrior.achievements()).toContain("Defeated Chuck Norris");
+  })
+
   test("can engage in battle and record enemy's level", () => {
     expect(warrior.battle(1)).toBeDefined;
   })

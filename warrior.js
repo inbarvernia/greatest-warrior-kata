@@ -4,6 +4,7 @@ class Warrior {
 
   constructor() {
     this.xp = 100;
+    this.achievementArr = [];
   }
 
   level() {
@@ -19,7 +20,7 @@ class Warrior {
   }
 
   achievements() {
-    return [];
+    return this.achievementArr;
   }
 
   battle(enemyLevel) {
@@ -40,6 +41,7 @@ class Warrior {
     }
 
     this.xp += experienceAwarded;
+    this.achievementArr.push(description);
     return description;
   }
 

@@ -41,7 +41,7 @@ Create a class called Warrior which calculates and keeps track of their level an
 
 [x] In addition to earning experience point from battles, warriors can also gain experience points from training.
 [x] Training will accept an array of three elements (except in java where you'll get 3 separated arguments): the description, the experience points your warrior earns, and the minimum level requirement.
-[] If the warrior's level meets the minimum level requirement, the warrior will receive the experience points from it and store the description of the training. It should end up returning that description as well.
+[x] If the warrior's level meets the minimum level requirement, the warrior will receive the experience points from it and store the description of the training. It should end up returning that description as well.
 [] If the warrior's level does not meet the minimum level requirement, the warrior doesn not receive the experience points and description and instead returns "Not strong enough", without any archiving of the result.
 
 ## Code Examples:
