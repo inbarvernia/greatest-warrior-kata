@@ -17,4 +17,8 @@ describe('Warrior', () => {
   test('starts at rank "Pushover"', () => {
     expect(warrior.rank()).toBe("Pushover");
   })
+
+  test('starts with 100 experience', () => {
+    expect(warrior.experience()).toBe(100);
+  })
 })

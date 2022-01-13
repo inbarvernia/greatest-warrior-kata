@@ -13,8 +13,8 @@ Create a class called Warrior which calculates and keeps track of their level an
 [] Warriors will compete in battles. Battles will always accept an enemy level to match against your own.
 [] With each battle successfully finished, your warrior's experience is updated based on the enemy's level.
 [] The experience earned from the battle is relative to what the warrior's current level is compared to the level of the enemy.
-A warrior's experience starts from 100. Each time the warrior's experience increases by another 100, the warrior's level rises to the next level.
-A warrior's experience is cumulative, and does not reset with each rise of level. The only exception is when the warrior reaches level 100, with which the experience stops at 10000
+[] A warrior's experience starts from 100. Each time the warrior's experience increases by another 100, the warrior's level rises to the next level.
+[] A warrior's experience is cumulative, and does not reset with each rise of level. The only exception is when the warrior reaches level 100, with which the experience stops at 10000
 [] At every 10 levels, your warrior will reach a new rank tier. (ex. levels 1-9 falls within "Pushover" tier, levels 80-89 fall within "Champion" tier, etc.)
 [] A warrior cannot progress beyond level 100 and rank "Greatest".
 

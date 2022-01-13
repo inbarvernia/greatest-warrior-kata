@@ -10,6 +10,10 @@ class Warrior {
     return "Pushover";
   }
 
+  experience() {
+    return 100;
+  }
+
 }
 
 module.exports = Warrior;
