@@ -36,6 +36,7 @@ class Warrior {
     } else if (enemyLevel == (this.level() - 1)) {
       this.xp += 5;
     }
+    return "Easy fight";
   }
 
   training(detailArray) {
