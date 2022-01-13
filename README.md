@@ -21,7 +21,7 @@ Create a class called Warrior which calculates and keeps track of their level an
 ## Battle Progress Rules & Calculations:
 
 [x]] If an enemy level does not fall in the range of 1 to 100, the battle cannot happen and should return "Invalid level".
-[] Completing a battle against an enemy with the same level as your warrior will be worth 10 experience points.
+[x] Completing a battle against an enemy with the same level as your warrior will be worth 10 experience points.
 [] Completing a battle against an enemy who is one level lower than your warrior will be worth 5 experience points.
 [] Completing a battle against an enemy who is two levels lower or more than your warrior will give 0 experience points.
 [] Completing a battle against an enemy who is one level higher or more than your warrior will accelarate your experience gaining. The greater the difference between levels, the more experinece your warrior will gain. The formula is 20 * diff * diff where diff equals the difference in levels between the enemy and your warrior.

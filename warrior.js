@@ -26,6 +26,10 @@ class Warrior {
     }
   }
 
+  training() {
+    
+  }
+
 }
 
 module.exports = Warrior;
