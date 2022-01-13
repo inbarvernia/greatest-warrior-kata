@@ -6,6 +6,7 @@ class Warrior {
     this.xp = 100;
     this.achievementArr = [];
     this.MAX_XP = 10000;
+    this.RANKS = ["Pushover", "Novice", "Fighter", "Warrior", "Veteran", "Sage", "Elite", "Conqueror", "Champion", "Master", "Greatest"];
   }
 
   level() {
@@ -13,7 +14,7 @@ class Warrior {
   }
 
   rank() {
-    return "Pushover";
+    return this.RANKS[Math.floor(this.level()/10)];
   }
 
   experience() {

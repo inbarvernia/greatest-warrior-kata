@@ -33,6 +33,16 @@ describe('Warrior', () => {
     expect(warrior.rank()).toBe("Pushover");
   })
 
+  test('ranks up to "Novice" after achieving level 10', () => {
+    warrior.training(["Training montage", 900, 1]);
+    expect(warrior.rank()).toBe("Novice");
+  })
+
+  test('continues to rank up every 10 levels following specified sequence', () => {
+    warrior.training(["Epic training montage", 8000, 1]);
+    expect(warrior.rank()).toBe("Champion");
+  })
+
   test('starts with 100 experience', () => {
     expect(warrior.experience()).toBe(100);
   })
