@@ -23,6 +23,11 @@ describe('Warrior', () => {
     warrior.training(["Serious shadowboxing", 500, 1]);
     expect(warrior.level()).toBe(6);
   })
+  
+  test('maxes out at level 100', () => {
+    warrior.training(["Hardcore shadowboxing", 10000, 1]);
+    expect(warrior.level()).toBe(100);
+  })
 
   test('starts at rank "Pushover"', () => {
     expect(warrior.rank()).toBe("Pushover");

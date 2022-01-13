@@ -9,7 +9,7 @@ class Warrior {
   }
 
   level() {
-    return Math.floor(this.xp/100);
+    return Math.floor(this.experience()/100);
   }
 
   rank() {
@@ -46,7 +46,6 @@ class Warrior {
       return description;
     }
   }
-
 }
 
 module.exports = Warrior;
