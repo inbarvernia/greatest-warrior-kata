@@ -49,6 +49,13 @@ describe('Warrior', () => {
     expect(warrior.experience()).toBe(205);
   })
 
+  test('does not increase experience when battling enemy two or more levels lower', () => {
+    warrior.training(["Serious shadowboxing", 500, 1]);
+    expect(warrior.experience()).toBe(600);
+    warrior.battle(4);
+    expect(warrior.experience()).toBe(600);
+  })
+
   test('can gain experience by training, based on experience specified', () => {
     warrior.training(["Defeated Chuck Norris", 9000, 1]);
     expect(warrior.experience()).toBe(9100);
