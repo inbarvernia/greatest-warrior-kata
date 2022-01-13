@@ -27,7 +27,7 @@ describe('Warrior', () => {
     expect(warrior.experience()).toBe(110);
   })
 
-  test('experience increases by 10 when battling enemy of same level', () => {
+  test('increase experience by 10 when battling enemy of same level', () => {
     warrior.battle(1);
     expect(warrior.experience()).toBe(110);
   })
@@ -42,5 +42,9 @@ describe('Warrior', () => {
 
   test('can train and enter training details', () => {
     expect(warrior.training(["Defeated Chuck Norris", 9000, 1])).toBeDefined;
+  })
+
+  test('receives "Not strong enough" message if current level does not meet the minimum training level requirement', () => {
+    expect(warrior.training(["Defeated Chuck Norris", 9000, 2])).toBe("Not strong enough");
   })
 })

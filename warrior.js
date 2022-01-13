@@ -26,8 +26,10 @@ class Warrior {
     }
   }
 
-  training() {
-    
+  training(detailArray) {
+    if (detailArray[2] > this.level()) {
+      return "Not strong enough";
+    }
   }
 
 }
