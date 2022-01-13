@@ -23,19 +23,19 @@ Create a class called Warrior which calculates and keeps track of their level an
 - [x] If an enemy level does not fall in the range of 1 to 100, the battle cannot happen and should return "Invalid level".
 - [x] Completing a battle against an enemy with the same level as your warrior will be worth 10 experience points.
 - [x] Completing a battle against an enemy who is one level lower than your warrior will be worth 5 experience points.
-- [ ] Completing a battle against an enemy who is two levels lower or more than your warrior will give 0 experience points.
-- [ ] Completing a battle against an enemy who is one level higher or more than your warrior will accelarate your experience gaining. The greater the difference between levels, the more experinece your warrior will gain. The formula is 20 * diff * diff where diff equals the difference in levels between the enemy and your warrior.
+- [x] Completing a battle against an enemy who is two levels lower or more than your warrior will give 0 experience points.
+- [x] Completing a battle against an enemy who is one level higher or more than your warrior will accelarate your experience gaining. The greater the difference between levels, the more experinece your warrior will gain. The formula is 20 * diff * diff where diff equals the difference in levels between the enemy and your warrior.
 - [ ] However, if your warrior is at least one rank lower than your enemy, and at least 5 levels lower, your warrior cannot fight against an enemy that strong and must instead return "You've been defeated".
 - [ ] Every successful battle will also return one of three responses: "Easy fight", "A good fight", "An intense fight". Return "Easy fight" if your warrior is 2 or more levels higher than your enemy's level. Return "A good fight" if your warrior is either 1 level higher or equal to your enemy's level. Return "An intense fight" if your warrior's level is lower than the enemy's level.
 
 ## Logic Examples:
 
-- [ ] If a warrior level 1 fights an enemy level 1, they will receive 10 experience points.
-- [ ] If a warrior level 1 fights an enemy level 3, they will receive 80 experience points.
-- [ ] If a warrior level 5 fights an enemy level 4, they will receive 5 experience points.
-- [ ] If a warrior level 3 fights an enemy level 9, they will receive 720 experience points, resulting in the warrior rising up by at least 7 levels.
+- [x] If a warrior level 1 fights an enemy level 1, they will receive 10 experience points.
+- [x] If a warrior level 1 fights an enemy level 3, they will receive 80 experience points.
+- [x] If a warrior level 5 fights an enemy level 4, they will receive 5 experience points.
+- [x] If a warrior level 3 fights an enemy level 9, they will receive 720 experience points, resulting in the warrior rising up by at least 7 levels.
 - [ ] If a warrior level 8 fights an enemy level 13, they will receive 0 experience points and return "You've been defeated". (Remember, difference in rank & enemy level being 5 levels higher or more must be established for this.)
-- [ ] If a warrior level 6 fights an enemy level 2, they will receive 0 experience points.
+- [x] If a warrior level 6 fights an enemy level 2, they will receive 0 experience points.
 
 ## Training Rules & Calculations:
 

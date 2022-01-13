@@ -28,6 +28,8 @@ class Warrior {
   battle(enemyLevel) {
     if (enemyLevel < 1 || enemyLevel > 100) {
       return "Invalid level";
+    } else if (enemyLevel > this.level()) {
+      this.xp += 20 * (enemyLevel - this.level()) ** 2;
     } else if (enemyLevel == this.level()) {
       this.xp += 10;
     } else if (enemyLevel == (this.level() - 1)) {

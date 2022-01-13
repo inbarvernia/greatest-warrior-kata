@@ -56,6 +56,17 @@ describe('Warrior', () => {
     expect(warrior.experience()).toBe(600);
   })
 
+  test('increases experience more quickly when battling higher level enemies', () => {
+    warrior.battle(3);
+    expect(warrior.experience()).toBe(180);
+  })
+
+  test('increases experience more quickly when battling higher level enemies', () => {
+    warrior.training(["Working out", 200, 1]);
+    warrior.battle(9);
+    expect(warrior.experience()).toBe(1020);
+  })
+
   test('can gain experience by training, based on experience specified', () => {
     warrior.training(["Defeated Chuck Norris", 9000, 1]);
     expect(warrior.experience()).toBe(9100);
