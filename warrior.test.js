@@ -14,6 +14,16 @@ describe('Warrior', () => {
     expect(warrior.level()).toBe(1);
   })
 
+  test('achieves level 2 once experience has increased to 200', () => {
+    warrior.training(["Casual shadowboxing", 100, 1]);
+    expect(warrior.level()).toBe(2);
+  })
+
+  test('continues to gain levels for each 100 points of experience', () => {
+    warrior.training(["Serious shadowboxing", 500, 1]);
+    expect(warrior.level()).toBe(6);
+  })
+
   test('starts at rank "Pushover"', () => {
     expect(warrior.rank()).toBe("Pushover");
   })
@@ -35,6 +45,11 @@ describe('Warrior', () => {
   test('cannot gain experience by training if below required level', () => {
     warrior.training(["Defeated Chuck Norris", 9000, 2]);
     expect(warrior.experience()).toBe(100);
+  })
+
+  test('maxes out experience at 10000', () => {
+    warrior.training(["Hardcore shadowboxing", 10000, 1]);
+    expect(warrior.experience()).toBe(10000);
   })
 
   test('starts with an empty array of achievements', () => {

@@ -5,10 +5,11 @@ class Warrior {
   constructor() {
     this.xp = 100;
     this.achievementArr = [];
+    this.MAX_XP = 10000;
   }
 
   level() {
-    return 1;
+    return Math.floor(this.xp/100);
   }
 
   rank() {
@@ -16,7 +17,8 @@ class Warrior {
   }
 
   experience() {
-    return this.xp;
+    return (this.xp > this.MAX_XP) ? this.MAX_XP : this.xp;
+    // Not sure if this is the best way of doing this or if better to stop other methods from adding to xp after this point
   }
 
   achievements() {
