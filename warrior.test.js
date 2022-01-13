@@ -77,23 +77,6 @@ describe('Warrior', () => {
     expect(warrior.experience()).toBe(1020);
   })
 
-  test('battle returns "Easy fight" if enemy is two or more levels lower', () => {
-    warrior.training(["Training montage", 900, 1]);
-    expect(warrior.battle(8)).toBe("Easy fight");
-    expect(warrior.battle(7)).toBe("Easy fight");
-  })
-
-  test('battle returns "A good fight" if enemy is equal level or one below', () => {
-    warrior.training(["Training montage", 900, 1]);
-    expect(warrior.battle(10)).toBe("A good fight");
-    expect(warrior.battle(9)).toBe("A good fight");
-  })
-
-  test('battle returns "An intense fight" if enemy is higher level', () => {
-    expect(warrior.battle(2)).toBe("An intense fight");
-    expect(warrior.battle(5)).toBe("An intense fight");
-  })
-
   test('can gain experience by training, based on experience specified', () => {
     warrior.training(["Defeated Chuck Norris", 9000, 1]);
     expect(warrior.experience()).toBe(9100);
@@ -129,6 +112,37 @@ describe('Warrior', () => {
 
   test("cannot engage in battle if an enemy level doesn't fall in the range of 1-100", () => {
     expect(warrior.battle(111)).toBe("Invalid level");
+  })
+
+  test('battle returns "Easy fight" if enemy is two or more levels lower', () => {
+    warrior.training(["Training montage", 900, 1]);
+    expect(warrior.battle(8)).toBe("Easy fight");
+    expect(warrior.battle(7)).toBe("Easy fight");
+  })
+
+  test('battle returns "A good fight" if enemy is equal level or one below', () => {
+    warrior.training(["Training montage", 900, 1]);
+    expect(warrior.battle(10)).toBe("A good fight");
+    expect(warrior.battle(9)).toBe("A good fight");
+  })
+
+  test('battle returns "An intense fight" if enemy is higher level', () => {
+    expect(warrior.battle(2)).toBe("An intense fight");
+    expect(warrior.battle(5)).toBe("An intense fight");
+  })
+
+  test('cannot do battle if warrior is at least one rank lower and at least 5 levels lower than enemy', () => {
+    warrior.training(["Training montage", 700, 1]);
+    expect(warrior.battle(13)).toBe("You've been defeated");
+  })
+
+  test('can still do battle if warrior is at least 5 levels lower than enemy but is less than one rank lower', () => {
+    expect(warrior.battle(7)).not.toBe("You've been defeated");
+  })
+
+  test('can still do battle if warrior is at least 1 rank lower than enemy but not 5 levels lower', () => {
+    warrior.training(["Training montage", 700, 1]);
+    expect(warrior.battle(10)).not.toBe("You've been defeated");
   })
 
   test('can train and enter training details', () => {
