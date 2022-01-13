@@ -83,6 +83,12 @@ describe('Warrior', () => {
     expect(warrior.battle(7)).toBe("Easy fight");
   })
 
+  test('battle returns "A good fight" if enemy is equal level or one below', () => {
+    warrior.training(["Training montage", 900, 1]);
+    expect(warrior.battle(10)).toBe("A good fight");
+    expect(warrior.battle(9)).toBe("A good fight");
+  })
+
   test('can gain experience by training, based on experience specified', () => {
     warrior.training(["Defeated Chuck Norris", 9000, 1]);
     expect(warrior.experience()).toBe(9100);
