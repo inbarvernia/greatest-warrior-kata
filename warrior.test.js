@@ -32,6 +32,10 @@ describe('Warrior', () => {
     expect(warrior.experience()).toBe(9100);
   })
 
+  test('starts with an empty array of achievements', () => {
+    expect(warrior.achievements()).toBeDefined;
+  })
+
   test("can engage in battle and record enemy's level", () => {
     expect(warrior.battle(1)).toBeDefined;
   })
