@@ -23,7 +23,7 @@ describe('Warrior', () => {
     warrior.training(["Serious shadowboxing", 500, 1]);
     expect(warrior.level()).toBe(6);
   })
-  
+
   test('maxes out at level 100', () => {
     warrior.training(["Hardcore shadowboxing", 10000, 1]);
     expect(warrior.level()).toBe(100);
@@ -40,6 +40,13 @@ describe('Warrior', () => {
   test('increase experience by 10 when battling enemy of same level', () => {
     warrior.battle(1);
     expect(warrior.experience()).toBe(110);
+  })
+
+  test('increases experience by 5 when battling enemy one level lower', () => {
+    warrior.training(["Casual shadowboxing", 100, 1]);
+    expect(warrior.experience()).toBe(200);
+    warrior.battle(1);
+    expect(warrior.experience()).toBe(205);
   })
 
   test('can gain experience by training, based on experience specified', () => {
