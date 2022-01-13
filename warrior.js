@@ -15,7 +15,9 @@ class Warrior {
   }
 
   battle(enemyLevel) {
-    
+    if (enemyLevel < 1 || enemyLevel > 100) {
+      return "Invalid level";
+    }
   }
 
 }

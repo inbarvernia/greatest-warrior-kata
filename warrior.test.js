@@ -25,4 +25,8 @@ describe('Warrior', () => {
   test("can engage in battle and record enemy's level", () => {
     expect(warrior.battle(1)).toBeDefined;
   })
+
+  test("Cannot engage in battle if an enemy level doesn't fall in the range of 1-100", () => {
+    expect(warrior.battle(111)).toBe("Invalid level");
+  })
 })
